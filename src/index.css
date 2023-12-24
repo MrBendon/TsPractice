@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer component {
+  .cardTitle {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(253, 253, 253);
+  }
+  .sectionTitle {
+    @apply lg:text-6xl text-4xl font-bold;
+  }
+}
