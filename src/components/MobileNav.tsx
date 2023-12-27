@@ -5,11 +5,13 @@ type PropsType = {
   isOpenNav: boolean;
   onClose: () => void;
   linklist: linkType[];
+  setIsOpenNav: (value: boolean) => void;
 };
 
-const MobileNav = ({ linklist, isOpenNav, onClose }: PropsType) => {
+const MobileNav = ({ linklist, isOpenNav, onClose, setIsOpenNav }: PropsType) => {
+  console.log(setIsOpenNav);
   return (
-    <ul
+    <div
       className={`lg:hidden w-[90%] fixed left-[50%] -translate-x-[50%] bg-white rounded-2xl ${
         !isOpenNav ? "invisible opacity-0 top-0" : "top-16"
       } p-12 transition-all duration-300 cursor-pointer flex flex-col gap-4 `}
@@ -23,7 +25,7 @@ const MobileNav = ({ linklist, isOpenNav, onClose }: PropsType) => {
       {linklist.map((link, i) => (
         <Link i={i} key={link.linkName} link={link} onClose={onClose} />
       ))}
-    </ul>
+    </div>
   );
 };
 

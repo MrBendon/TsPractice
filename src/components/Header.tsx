@@ -71,10 +71,20 @@ const Header = () => {
         ))}
       </nav>
       {/* mobile Nav */}
-      <nav className="lg:hidden text-white hover:cursor-pointer group" onClick={() => handleClickNav()}>
-        <div className="px-4 py-1 border font-thin border-gray-600 rounded-2xl">Menu</div>
+      <nav className="lg:hidden text-white hover:cursor-pointer group">
+        <div
+          className="px-4 py-1 border font-thin border-gray-600 rounded-2xl"
+          onClick={() => handleClickNav()}
+        >
+          Menu
+        </div>
       </nav>
-      <MobileNav linklist={linklist} isOpenNav={isOpenNav} onClose={() => handleClickNav()} />
+      <MobileNav
+        linklist={linklist}
+        isOpenNav={isOpenNav}
+        setIsOpenNav={setIsOpenNav}
+        onClose={() => handleClickNav()}
+      />
       <div className="lg:flex hidden">
         <Button buttonContent="Talk to us" />
       </div>
