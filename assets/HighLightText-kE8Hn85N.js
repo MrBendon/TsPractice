@@ -1,0 +1,1 @@
+import{j as t}from"./index-9fpbPprD.js";const x=({text:e="default text"})=>t.jsx("div",{className:"text-white font-light p-[1px] bg-gradient-to-r from-[#29ADB2] via-[#448ad5] to-blue-600 w-max rounded-2xl",children:t.jsx("p",{className:"px-4 bg-black rounded-2xl",children:e})});export{x as H};
